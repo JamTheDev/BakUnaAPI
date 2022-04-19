@@ -1,0 +1,120 @@
+<style>
+  .container {
+    margin-top: 100px;
+    padding-left: 50px;
+  }
+</style>
+
+<div class="container">
+
+  <p class="h2 text-center"><strong>REQUIRED ENDPOINT FOR APIs: /api/</strong></p>
+  <p class="h5 text-center mb-5">Example: https://bakunaapi.jamemmanuelarev.repl.co/api/users</p>
+
+  <p class="h2 text-center"><strong>REQUIRED KEY FOR EACH ENDPOINT: key=any</strong></p>
+  <p class="h5 text-center mb-5">Example: https://bakunaapi.jamemmanuelarev.repl.co/api/users/key=...</p>
+  
+  <section>
+    <p class="h2">Authorization Endpoints</p>
+
+    <p class="h5"> Endpoint: <strong>/validate</strong> </p>
+    <table class="table">
+      <thead>
+        <th scope="col"> Parameter </th>
+        <th scope="col"> Available Values </th>
+        <th scope="col"> Description </th>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">branch</th>
+        <td>malolos, calumpit, guiguinto</td>
+        <td>Specifies the branch needed.</td>
+      </tr>
+      <tr>
+        <th scope="row">auth_key</th>
+        <td>any</td>
+        <td>Specifies the access key for the API.</td>
+      </tr>
+    
+    </tbody>
+    </table>
+
+    <p>Returns: int (1 for good, -1 for bad) </p>
+  </section>
+
+  <section>
+    <p class="h2">Branch Data Endpoints</p>
+
+     <p class="h5"> Endpoint: <strong>/get</strong> </p>
+    <table class="table">
+      <thead>
+        <th scope="col"> Parameter </th>
+        <th scope="col"> Available Values </th>
+        <th scope="col"> Description </th>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">branch_city</th>
+        <td>malolos, calumpit, guiguinto</td>
+        <td>Specifies the main branch location.</td>
+      </tr>
+      <tr>
+        <th scope="row">branch_loc</th>
+        <td>sumapang_matanda, gatbuka, pio_cruzcosa, starita, pinagbakahan</td>
+        <td>Specifies the location in the city of a branch.</td>
+      </tr>
+
+      <tr>
+        <th scope="row">status</th>
+        <td>all, vaccinated, non_vaccinated</td>
+        <td>Filters every employee's vaccination status of each branch.</td>
+      </tr>
+    
+    </tbody>
+    </table>
+
+    <p class="h5"> Endpoint: <strong>/post</strong> </p>
+    <table class="table">
+      <thead>
+        <th scope="col"> Parameter </th>
+        <th scope="col"> Available Values </th>
+        <th scope="col"> Description </th>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">branch_city</th>
+        <td>malolos, calumpit, guiguinto</td>
+        <td>Specifies the main branch location.</td>
+      </tr>
+      <tr>
+        <th scope="row">branch_loc</th>
+        <td>sumapang_matanda, gatbuka, pio_cruzcosa, starita, pinagbakahan</td>
+        <td>Specifies the location in the city of a branch.</td>
+      </tr>
+
+      <tr>
+        <th scope="row">BODY</th>
+        <td>TO BE POSTED AS A JSON WHEN PERFORMING A <strong>PUT</strong> REQUEST</td>
+        <td>TO BE POSTED AS A JSON WHEN PERFORMING A <strong>PUT</strong> REQUEST</td>
+      </tr>
+    
+    </tbody>
+    </table>
+
+    <p class="h5"> Endpoint: <strong>/update/{id: int}</strong> </p>
+    <table class="table">
+      <thead>
+        <th scope="col"> Parameter </th>
+        <th scope="col"> Available Values </th>
+        <th scope="col"> Description </th>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">id</th>
+        <td>any</td>
+        <td>Specifies the user to be updated.</td>
+      </tr>
+
+    </tbody>
+    </table>
+  </section>
+</div>
